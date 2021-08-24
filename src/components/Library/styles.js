@@ -27,9 +27,6 @@ export const styles = createUseStyles({
 		borderRadius: 20,
 		border: 'transparent',
 	},
-	'& $selected': {
-		background: 'rgba(194, 208, 253)',
-	},
 	'& $activeLibrary': {
 		transform: 'translateX(0%)',
 		opacity: 1,

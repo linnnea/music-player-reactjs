@@ -13,6 +13,9 @@ export const styles = createUseStyles({
 		'&:hover': {
 			background: 'rgba(222,222,222)',
 		},
+		'& selected': {
+			background: 'rgba(194, 208, 253)',
+		},
 	},
 	songDescription: {
 		paddingLeft: '1rem',

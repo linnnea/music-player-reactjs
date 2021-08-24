@@ -1,10 +1,21 @@
 import { styles } from './styles';
 
-const LibrarySong = ({ song }) => {
+const LibrarySong = ({ song, songs, setCurrentSong, id, currentSong }) => {
 	const classes = styles();
 
+	const selectSongHandler = () => {
+		setCurrentSong(song);
+	};
+
 	return (
-		<div className={classes.librarySong}>
+		<div
+			onClick={selectSongHandler}
+			className={
+				currentSong.id
+					? `${classes.librarySong} ${classes.selected}`
+					: `${classes.librarySong}`
+			}
+		>
 			<img src={song.cover} alt={song.name} />
 			<div className={classes.songDescription}>
 				<h3>{song.name}</h3>

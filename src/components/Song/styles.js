@@ -7,5 +7,16 @@ export const styles = createUseStyles({
 		justifyContent: 'center',
 		alignItems: 'center',
 		minHeight: '60vh',
+
+		' & img': {
+			width: '20%',
+			borderRadius: '50%',
+		},
+		'& h2': {
+			padding: [['3rem', '1rem', '1rem', '1rem']],
+		},
+		'& h3': {
+			fontSize: '1rem',
+		},
 	},
 });

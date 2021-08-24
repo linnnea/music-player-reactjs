@@ -14,7 +14,7 @@ export const styles = createUseStyles({
 
 		'& input': {
 			width: '100%',
-			padding: [['1rem', '2rem']],
+			padding: [['1rem', 0]],
 		},
 		'& p': {
 			padding: [['1rem']],

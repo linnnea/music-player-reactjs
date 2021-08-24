@@ -1,26 +1,85 @@
+import { useState } from 'react';
+import { useRef } from 'react';
 import { styles } from './styles';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import {
+	PlayArrow,
+	KeyboardArrowLeft,
+	KeyboardArrowRight,
+	Pause,
+} from '@material-ui/icons';
 
-const Player = () => {
+const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
 	const classes = styles();
+
+	const audioRef = useRef(null);
+	const [songInfo, setSongInfo] = useState({
+		currentTime: 0,
+		duration: 0,
+	});
+
+	const playSongHandler = () => {
+		isPlaying ? audioRef.current.pause() : audioRef.current.play();
+		setIsPlaying(!isPlaying);
+	};
+
+	const updateTimeHandler = (e) => {
+		const current = e.target.currentTime;
+		const duration = e.target.duration;
+		setSongInfo({ ...songInfo, currentTime: current, duration });
+	};
+
+	const getTime = (time) => {
+		const minutes = Math.floor(time / 60);
+		const seconds = Math.floor(time % 60);
+		const secondsWithZero = String(seconds).padStart(2, '0');
+		return `${minutes}:${secondsWithZero}`;
+	};
+
+	const dragHandler = (e) => {
+		audioRef.current.currentTime = e.target.value;
+		setSongInfo({
+			...songInfo,
+			currentTime: e.target.value,
+		});
+	};
+
 	return (
 		<div className={classes.player}>
 			<div className={classes.timeControl}>
-				<p>Start Time</p>
-				<input type="range" />
-				<p>End time</p>
+				<p>{getTime(songInfo.currentTime)}</p>
+				<input
+					onChange={dragHandler}
+					type="range"
+					min={0}
+					max={songInfo.duration}
+					value={songInfo.currentTime}
+				/>
+				<p>{getTime(songInfo.duration)}</p>
 			</div>
 			<div className={classes.playControls}>
-				<KeyboardArrowLeftIcon
-					className={`${classes.icon} ${classes.skipBack}`}
-				/>
-				<PlayArrowIcon className={`${classes.icon} ${classes.play}`} />
-				<KeyboardArrowRightIcon
+				<KeyboardArrowLeft className={`${classes.icon} ${classes.skipBack}`} />
+				{isPlaying ? (
+					<Pause
+						onClick={playSongHandler}
+						className={`${classes.icon} ${classes.pause}`}
+					/>
+				) : (
+					<PlayArrow
+						onClick={playSongHandler}
+						className={`${classes.icon} ${classes.play}`}
+					/>
+				)}
+				<KeyboardArrowRight
 					className={`${classes.icon} ${classes.skipForward}`}
 				/>
 			</div>
+
+			<audio
+				ref={audioRef}
+				onTimeUpdate={updateTimeHandler}
+				onLoadedMetadata={updateTimeHandler}
+				src={currentSong.audio}
+			></audio>
 		</div>
 	);
 };

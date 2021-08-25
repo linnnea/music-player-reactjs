@@ -10,25 +10,17 @@ export const styles = createUseStyles({
 		background: '#fff',
 		boxShadow: [[2, 2, 50, 'rgba(204, 204, 204)']],
 		overflow: 'scroll',
+		// transform: 'translateX(-100%)',
+		transition: 'all 0.5s ease',
+		// opacity: 0,
 	},
-	'& *': {
+	// '.library.active': {
+	// 	transform: 'translateX(0%) !important',
+	// 	opacity: '1 !important',
+	// 	background: 'red',
+	// },
+	'*': {
 		scrollbarWidth: 'thin',
 		scrollbarColor: 'rgba(155,155,155, 0.5) transparent',
-	},
-	/* Works on Chrome / Edge / Safari */
-	'& *::-webkit-scrollbar': {
-		width: 5,
-	},
-	'& *::-webkit-scrollbar-track': {
-		background: 'transparent',
-	},
-	'& *::-webkit-scrollbar-thumb': {
-		backgroundColor: 'rgba(155, 155, 155, 0.7)',
-		borderRadius: 20,
-		border: 'transparent',
-	},
-	'& $activeLibrary': {
-		transform: 'translateX(0%)',
-		opacity: 1,
 	},
 });

@@ -11,10 +11,7 @@ export const styles = createUseStyles({
 			width: '30%',
 		},
 		'&:hover': {
-			background: 'rgba(222,222,222)',
-		},
-		'& selected': {
-			background: 'rgba(194, 208, 253)',
+			background: 'rgba(222,222,222) !important',
 		},
 	},
 	songDescription: {

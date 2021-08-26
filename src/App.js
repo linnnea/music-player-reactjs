@@ -14,13 +14,15 @@ function App() {
 	const [libraryStatus, setLibraryStatus] = useState(false);
 
 	return (
-		<div className="App">
+		<div className="App" style={libraryStatus ? { marginLeft: '30%' } : {}}>
 			<Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
 			<Song currentSong={currentSong} />
 			<Player
 				isPlaying={isPlaying}
 				setIsPlaying={setIsPlaying}
 				currentSong={currentSong}
+				songs={songs}
+				setCurrentSong={setCurrentSong}
 			/>
 			<Library
 				currentSong={currentSong}

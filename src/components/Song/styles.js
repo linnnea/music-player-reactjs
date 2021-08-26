@@ -9,8 +9,11 @@ export const styles = createUseStyles({
 		minHeight: '60vh',
 
 		' & img': {
-			width: '20%',
+			width: '60%',
 			borderRadius: '50%',
+			'@media only screen and (min-width: 768px)': {
+				width: '20%',
+			},
 		},
 		'& h2': {
 			padding: [['3rem', '1rem', '1rem', '1rem']],

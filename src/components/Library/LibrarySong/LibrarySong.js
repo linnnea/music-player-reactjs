@@ -24,14 +24,14 @@ const LibrarySong = ({
 		setSongs(newSongs);
 	};
 
-	const isActive = song.active;
-
 	return (
 		<div
 			onClick={selectSongHandler}
 			className={classes.librarySong}
 			style={
-				isActive ? { backgroundColor: 'lightblue' } : { backgroundColor: '' }
+				song.id === currentSong.id
+					? { backgroundColor: 'lightblue' }
+					: { backgroundColor: '' }
 			}
 		>
 			<img src={song.cover} alt={song.name} />

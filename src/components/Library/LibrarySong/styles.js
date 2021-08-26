@@ -6,6 +6,7 @@ export const styles = createUseStyles({
 		alignItems: 'center',
 		padding: [['1rem', '2rem']],
 		cursor: 'pointer',
+		transition: 'background 0.3s ease',
 
 		'& img': {
 			width: '30%',

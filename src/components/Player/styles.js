@@ -11,10 +11,17 @@ export const styles = createUseStyles({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		minHeight: '20vh',
+		transition: 'all 0.3s ease',
 
+		'@media only screen and (min-height: 650px)': { minHeight: 'initial' },
+		'@media only screen and (min-width: 800px)': {
+			width: '70%',
+			margin: [[0, 'auto']],
+		},
 		'@media only screen and (min-width: 1024px)': {
 			bottom: 0,
 			justifyContent: 'flex-end',
+			width: '100%',
 			minHeight: '11vh',
 		},
 	},
@@ -30,12 +37,6 @@ export const styles = createUseStyles({
 			'-webkitAppearance': 'none',
 			background: 'transparent',
 			cursor: 'pointer',
-		},
-		'@media only screen and (min-width: 768px)': {
-			width: '50%',
-		},
-		'@media only screen and (min-width: 1024px)': {
-			width: '100%',
 		},
 	},
 	infoContainer: {
@@ -61,7 +62,7 @@ export const styles = createUseStyles({
 			transform: 'translateY(-50%)',
 			paddingTop: 5,
 
-			'& h2': { fontSize: '1.2rem' },
+			'& h2': { fontSize: '1.2rem', paddingBottom: '0.4rem' },
 			'& h3': { fontSize: '0.7rem' },
 		},
 	},
@@ -74,14 +75,10 @@ export const styles = createUseStyles({
 		padding: [['1rem', 0]],
 
 		'& p': {
-			'&:nth-child(2)': {
-				textAlign: 'right',
-			},
+			'&:nth-child(2)': { textAlign: 'right' },
 
 			'@media only screen and (min-width: 1024px)': {
-				'&:nth-child(2)': {
-					color: 'gray',
-				},
+				'&:nth-child(2)': { color: 'gray' },
 			},
 		},
 		'@media only screen and (min-width: 1024px)': {
@@ -100,9 +97,7 @@ export const styles = createUseStyles({
 		height: '0.2rem',
 		overflow: 'hidden',
 
-		'@media only screen and (min-width: 1024px)': {
-			width: '100%',
-		},
+		'@media only screen and (min-width: 1024px)': { width: '100%' },
 	},
 	animateTrack: {
 		position: 'absolute',
@@ -140,12 +135,8 @@ export const styles = createUseStyles({
 		width: '20px !important',
 		height: '20px !important',
 	},
-	icon: {
-		cursor: 'pointer',
-	},
+	icon: { cursor: 'pointer' },
 	'input[type="range"]': {
-		'&:focus': {
-			outline: 'none',
-		},
+		'&:focus': { outline: 'none' },
 	},
 });

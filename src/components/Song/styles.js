@@ -10,21 +10,25 @@ export const styles = createUseStyles({
 		textTransform: 'uppercase',
 		margin: [[20, 'auto', 0, 'auto']],
 
+		'@media only screen and (min-height: 650px)': {
+			margin: [[30, 'auto', 0, 'auto']],
+		},
+		'@media only screen and (min-width: 1024px)': {
+			margin: [['5%', 'auto', 0, 'auto']],
+		},
+
 		' & img': {
 			display: 'flex',
 			flexDirection: 'column',
 			alignSelf: 'center',
 			width: '100%',
-			height: '13em',
-			borderRadius: [['12em', '12em', 0, 0]],
-			objectFit: 'cover',
-			objectPosition: 'top',
-			'@media only screen and (min-width: 768px)': {
-				width: '20%',
-			},
+			height: '40vh',
+			borderRadius: [['100em', '100em', 0, 0]],
+			'@media only screen and (min-height: 650px)': { height: '57vh' },
+			'@media only screen and (min-width: 800px)': { maxWidth: '70%' },
 		},
 		'& h2': {
-			fontSize: '1.2rem',
+			fontSize: '1rem',
 			padding: [['2rem', 0, '0.7rem', 0]],
 		},
 		'& h3': {
@@ -35,13 +39,11 @@ export const styles = createUseStyles({
 	songInfo: {
 		display: 'flex',
 		flexDirection: 'column',
-		// alignSelf: 'center',
-		// padding: [[0, '1rem']],
-		// width: '90%',
-		// margin: [[0, '5%']],
 
-		'@media only screen and (min-width: 1024px)': {
-			display: 'none',
+		'@media only screen and (min-width: 800px)': {
+			width: '70%',
+			margin: [[0, 'auto']],
 		},
+		'@media only screen and (min-width: 1024px)': { display: 'none' },
 	},
 });

@@ -4,17 +4,12 @@ export const styles = createUseStyles({
 	librarySong: {
 		display: 'flex',
 		alignItems: 'center',
-		// padding: [['1rem', '2rem']],
 		cursor: 'pointer',
-		transition: 'background 0.3s ease',
-		borderBottom: [[1, 'solid', '#eee']],
+		transition: 'all 0.3s ease',
+		borderBottom: [[1, 'solid', '#181818']],
 
-		'& img': {
-			width: '20%',
-		},
-		'&:hover': {
-			background: '#eee !important',
-		},
+		'& img': { width: '20%' },
+		'&:hover': { background: 'rgba(0, 0, 0, 0.85) !important', color: '#fff' },
 	},
 	songDescription: {
 		paddingLeft: '1.5rem',
@@ -23,8 +18,6 @@ export const styles = createUseStyles({
 			fontSize: '0.9rem',
 			paddingBottom: '0.5rem',
 		},
-		'& h4': {
-			fontSize: '0.65rem',
-		},
+		'& h4': { fontSize: '0.65rem' },
 	},
 });

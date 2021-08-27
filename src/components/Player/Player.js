@@ -9,6 +9,7 @@ const Player = ({
 	isPlaying,
 	setIsPlaying,
 	songs,
+	libraryStatus,
 }) => {
 	const classes = styles();
 
@@ -73,7 +74,14 @@ const Player = ({
 	};
 
 	return (
-		<div className={classes.player}>
+		<div
+			className={classes.player}
+			style={
+				libraryStatus
+					? { paddingLeft: '30%', width: '70%', transition: 'all 0.3s ease' }
+					: { paddingLeft: '0%', width: '100%', transition: 'all 0.3s ease' }
+			}
+		>
 			<div className={classes.timeControl}>
 				<div
 					className={classes.track}

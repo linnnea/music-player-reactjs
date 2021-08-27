@@ -11,9 +11,7 @@ export const styles = createUseStyles({
 		boxShadow: [[2, 2, 50, 'rgba(204, 204, 204)']],
 		overflow: 'scroll',
 		transition: 'all 0.5s ease',
-		'@media only screen and (min-width: 768px)': {
-			width: '20rem',
-		},
+		'@media only screen and (min-width: 768px)': { width: '20rem' },
 		'& h2': {
 			display: 'flex',
 			flexDirection: 'column',

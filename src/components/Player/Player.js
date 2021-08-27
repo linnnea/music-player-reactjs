@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import { useRef } from 'react';
 import { styles } from './styles';
-import {
-	PlayArrow,
-	KeyboardArrowLeft,
-	KeyboardArrowRight,
-	Pause,
-} from '@material-ui/icons';
+import { PlayArrow, SkipNext, SkipPrevious, Pause } from '@material-ui/icons';
 
 const Player = ({
 	currentSong,
@@ -80,7 +75,6 @@ const Player = ({
 	return (
 		<div className={classes.player}>
 			<div className={classes.timeControl}>
-				<p>{getTime(songInfo.currentTime)}</p>
 				<div
 					className={classes.track}
 					style={{
@@ -96,27 +90,30 @@ const Player = ({
 					/>
 					<div style={trackAnim} className={classes.animateTrack}></div>
 				</div>
-				<p>{getTime(songInfo.duration)}</p>
+				<div className={classes.timeInfo}>
+					<p>{getTime(songInfo.currentTime)}</p>
+					<p>{getTime(songInfo.duration)}</p>
+				</div>
 			</div>
 			<div className={classes.playControls}>
-				<KeyboardArrowLeft
+				<SkipPrevious
 					onClick={() => skipTrackHandler(-1)}
-					className={`${classes.icon} ${classes.skipBack}`}
+					className={`${classes.icon} ${classes.skip}`}
 				/>
 				{isPlaying ? (
 					<Pause
 						onClick={playSongHandler}
-						className={`${classes.icon} ${classes.pause}`}
+						className={`${classes.icon} ${classes.playPause}`}
 					/>
 				) : (
 					<PlayArrow
 						onClick={playSongHandler}
-						className={`${classes.icon} ${classes.play}`}
+						className={`${classes.icon} ${classes.playPause}`}
 					/>
 				)}
-				<KeyboardArrowRight
+				<SkipNext
 					onClick={() => skipTrackHandler(1)}
-					className={`${classes.icon} ${classes.skipForward}`}
+					className={`${classes.icon} ${classes.skip}`}
 				/>
 			</div>
 

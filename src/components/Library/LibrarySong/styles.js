@@ -9,7 +9,7 @@ export const styles = createUseStyles({
 		transition: 'background 0.3s ease',
 
 		'& img': {
-			width: '30%',
+			width: '23%',
 		},
 		'&:hover': {
 			background: 'rgba(222,222,222) !important',
@@ -19,10 +19,11 @@ export const styles = createUseStyles({
 		paddingLeft: '1rem',
 
 		'& h3': {
-			fontSize: '1rem',
+			fontSize: '0.9rem',
+			paddingBottom: '0.5rem',
 		},
 		'& h4': {
-			fontSize: '0.7rem',
+			fontSize: '0.65rem',
 		},
 	},
 });

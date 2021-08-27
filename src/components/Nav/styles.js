@@ -7,17 +7,24 @@ export const styles = createUseStyles({
 		alignItems: 'center',
 		minHeight: '10vh',
 
+		'& h1': {
+			fontSize: '1rem',
+		},
+
 		'& button': {
-			background: 'transparent',
+			textTransform: 'uppercase',
 			cursor: 'pointer',
-			border: '2px solid rgb(65,65,65)',
-			padding: '0.5rem',
+			background: '#000',
+			border: 'none',
+			color: '#fff',
+			padding: [[2, 4, 0, 4]],
+			fontSize: '1rem',
 			transition: 'all 0.3s ease',
 			zIndex: 10,
+			width: 'auto',
 
 			'&:hover': {
-				background: 'rgb(65,65,65)',
-				color: 'white',
+				opacity: 0.5,
 			},
 		},
 	},

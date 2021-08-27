@@ -5,21 +5,32 @@ export const styles = createUseStyles({
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
-		alignItems: 'center',
 		minHeight: '60vh',
+		textTransform: 'uppercase',
 
 		' & img': {
-			width: '60%',
-			borderRadius: '50%',
+			display: 'flex',
+			flexDirection: 'column',
+			alignSelf: 'center',
+			// width: '60%',
+			borderRadius: [['50%', '50%', 0, 0]],
 			'@media only screen and (min-width: 768px)': {
 				width: '20%',
 			},
 		},
 		'& h2': {
-			padding: [['3rem', '1rem', '1rem', '1rem']],
+			fontSize: '1.2rem',
+			padding: [['3rem', 0, '1rem', 0]],
 		},
 		'& h3': {
-			fontSize: '1rem',
+			fontSize: '0.65rem',
 		},
+	},
+	songInfo: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignSelf: 'center',
+		// padding: [[0, '1rem']],
+		// width: '90%',
 	},
 });

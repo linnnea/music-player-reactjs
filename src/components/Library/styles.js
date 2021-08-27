@@ -14,6 +14,14 @@ export const styles = createUseStyles({
 		'@media only screen and (min-width: 768px)': {
 			width: '20rem',
 		},
+		'& h2': {
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'center',
+			padding: [[0, '2rem']],
+			minHeight: '10vh',
+			fontSize: '0.9rem',
+		},
 	},
 	'*': {
 		scrollbarWidth: 'thin',

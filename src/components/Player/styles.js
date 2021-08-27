@@ -2,11 +2,21 @@ import { createUseStyles } from 'react-jss';
 
 export const styles = createUseStyles({
 	player: {
+		position: 'fixed',
+		left: 0,
+		right: 0,
+		bottom: 10,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		minHeight: '20vh',
+
+		'@media only screen and (min-width: 1024px)': {
+			bottom: 0,
+			justifyContent: 'flex-end',
+			minHeight: '11vh',
+		},
 	},
 	timeControl: {
 		display: 'flex',
@@ -24,6 +34,36 @@ export const styles = createUseStyles({
 		'@media only screen and (min-width: 768px)': {
 			width: '50%',
 		},
+		'@media only screen and (min-width: 1024px)': {
+			width: '100%',
+		},
+	},
+	infoContainer: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		width: '100%',
+
+		'@media only screen and (min-width: 1024px)': {
+			position: 'absolute',
+			top: '50%',
+			transform: 'translateY(-50%)',
+			alignItems: 'center',
+			padding: [[0, '5%', '0.4%', '5%']],
+		},
+	},
+	songInfo: {
+		display: 'none',
+		'@media only screen and (min-width: 1024px)': {
+			display: 'flex',
+			flexDirection: 'column',
+			position: 'absolute',
+			top: '50%',
+			transform: 'translateY(-50%)',
+			paddingTop: 5,
+
+			'& h2': { fontSize: '1.2rem' },
+			'& h3': { fontSize: '0.7rem' },
+		},
 	},
 	timeInfo: {
 		display: 'flex',
@@ -37,15 +77,32 @@ export const styles = createUseStyles({
 			'&:nth-child(2)': {
 				textAlign: 'right',
 			},
+
+			'@media only screen and (min-width: 1024px)': {
+				'&:nth-child(2)': {
+					color: 'gray',
+				},
+			},
+		},
+		'@media only screen and (min-width: 1024px)': {
+			position: 'relative',
+			bottom: -3,
+			justifyContent: 'space-between',
+			width: 75,
+			marginLeft: 'auto',
 		},
 	},
 	track: {
-		position: 'relative',
+		position: 'absolute',
+		top: 0,
 		background: 'lightblue',
-		width: '100%',
+		width: '90%',
 		height: '0.2rem',
-		borderRadius: '1rem',
 		overflow: 'hidden',
+
+		'@media only screen and (min-width: 1024px)': {
+			width: '100%',
+		},
 	},
 	animateTrack: {
 		position: 'absolute',
@@ -61,11 +118,15 @@ export const styles = createUseStyles({
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		width: '80%',
+		width: 200,
 		padding: [['1rem']],
 
-		'@media only screen and (min-width: 768px)': {
-			width: '50%',
+		'@media only screen and (min-width: 1024px)': {
+			position: 'absolute',
+			top: '50%',
+			transform: 'translateY(-50%)',
+			width: '20%',
+			padding: [['0.7rem']],
 		},
 	},
 	playPause: {

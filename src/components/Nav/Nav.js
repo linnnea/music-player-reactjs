@@ -6,7 +6,12 @@ const LibrarySong = ({ libraryStatus, setLibraryStatus }) => {
 	return (
 		<nav className={classes.nav}>
 			<h1>Lo-Fi Music Player</h1>
-			<button onClick={() => setLibraryStatus(!libraryStatus)}>Lib</button>
+			<button
+				style={libraryStatus ? { marginLeft: '-30%' } : {}}
+				onClick={() => setLibraryStatus(!libraryStatus)}
+			>
+				Lib
+			</button>
 		</nav>
 	);
 };

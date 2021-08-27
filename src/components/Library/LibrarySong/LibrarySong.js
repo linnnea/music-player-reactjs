@@ -30,7 +30,7 @@ const LibrarySong = ({
 			className={classes.librarySong}
 			style={
 				song.id === currentSong.id
-					? { backgroundColor: 'lightblue' }
+					? { backgroundColor: 'rgba(152, 255, 176, 0.6)' }
 					: { backgroundColor: '' }
 			}
 		>

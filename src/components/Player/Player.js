@@ -90,9 +90,15 @@ const Player = ({
 					/>
 					<div style={trackAnim} className={classes.animateTrack}></div>
 				</div>
-				<div className={classes.timeInfo}>
-					<p>{getTime(songInfo.currentTime)}</p>
-					<p>{getTime(songInfo.duration)}</p>
+				<div className={classes.infoContainer}>
+					<div className={classes.songInfo}>
+						<h2>{currentSong.name}</h2>
+						<h3>{currentSong.artist}</h3>
+					</div>
+					<div className={classes.timeInfo}>
+						<p>{getTime(songInfo.currentTime)}</p>
+						<p>{getTime(songInfo.duration)}</p>
+					</div>
 				</div>
 			</div>
 			<div className={classes.playControls}>

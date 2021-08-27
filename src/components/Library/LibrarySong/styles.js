@@ -4,19 +4,20 @@ export const styles = createUseStyles({
 	librarySong: {
 		display: 'flex',
 		alignItems: 'center',
-		padding: [['1rem', '2rem']],
+		// padding: [['1rem', '2rem']],
 		cursor: 'pointer',
 		transition: 'background 0.3s ease',
+		borderBottom: [[1, 'solid', '#eee']],
 
 		'& img': {
-			width: '23%',
+			width: '20%',
 		},
 		'&:hover': {
-			background: 'rgba(222,222,222) !important',
+			background: '#eee !important',
 		},
 	},
 	songDescription: {
-		paddingLeft: '1rem',
+		paddingLeft: '1.5rem',
 
 		'& h3': {
 			fontSize: '0.9rem',

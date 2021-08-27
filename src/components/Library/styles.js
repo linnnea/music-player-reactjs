@@ -18,9 +18,10 @@ export const styles = createUseStyles({
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'center',
-			padding: [[0, '2rem']],
+			padding: [[0, '1rem']],
 			minHeight: '10vh',
 			fontSize: '0.9rem',
+			borderBottom: [[1, 'solid', '#000']],
 		},
 	},
 	'*': {

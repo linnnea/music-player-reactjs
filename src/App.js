@@ -15,15 +15,20 @@ function App() {
 
 	return (
 		<div className="App" style={libraryStatus ? { marginLeft: '30%' } : {}}>
-			<Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-			<Song currentSong={currentSong} />
-			<Player
-				isPlaying={isPlaying}
-				setIsPlaying={setIsPlaying}
-				currentSong={currentSong}
-				songs={songs}
-				setCurrentSong={setCurrentSong}
-			/>
+			<div className="container">
+				<Nav
+					libraryStatus={libraryStatus}
+					setLibraryStatus={setLibraryStatus}
+				/>
+				<Song currentSong={currentSong} />
+				<Player
+					isPlaying={isPlaying}
+					setIsPlaying={setIsPlaying}
+					currentSong={currentSong}
+					songs={songs}
+					setCurrentSong={setCurrentSong}
+				/>
+			</div>
 			<Library
 				currentSong={currentSong}
 				setCurrentSong={setCurrentSong}

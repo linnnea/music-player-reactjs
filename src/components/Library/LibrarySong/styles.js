@@ -2,22 +2,30 @@ import { createUseStyles } from 'react-jss';
 
 export const styles = createUseStyles({
 	librarySong: {
+		position: 'relative',
 		display: 'flex',
 		alignItems: 'center',
 		cursor: 'pointer',
 		transition: 'all 0.3s ease',
-		borderBottom: [[1, 'solid', '#181818']],
+		margin: '3px auto',
+		maxWidth: '22em',
 
-		'& img': { width: '20%' },
-		'&:hover': { background: 'rgba(0, 0, 0, 0.85) !important', color: '#fff' },
+		'& img': { width: '15%', borderRadius: '50%' },
+		'&:hover': {
+			backgroundColor: 'rgba(255, 255, 255, 0.5)',
+			color: '#000',
+			borderRadius: '0.5em',
+		},
 	},
 	songDescription: {
-		paddingLeft: '1.5rem',
+		display: 'flex',
 
-		'& h3': {
-			fontSize: '0.9rem',
-			paddingBottom: '0.5rem',
-		},
-		'& h4': { fontSize: '0.65rem' },
+		'& h3': { fontSize: '0.9rem', whiteSpace: 'nowrap' },
+		'& :nth-child(2)': { marginLeft: 30 },
+		'& *': { padding: '0.2rem 0' },
+	},
+	playStatus: {
+		position: 'absolute',
+		right: 5,
 	},
 });

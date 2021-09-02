@@ -5,13 +5,14 @@ export const styles = createUseStyles({
 		position: 'fixed',
 		left: 0,
 		right: 0,
-		bottom: 10,
+		bottom: 20,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		minHeight: '20vh',
 		transition: 'all 0.3s ease',
+		fontFamily: 'Monument Regular',
 
 		'@media only screen and (min-height: 650px)': { minHeight: 'initial' },
 		'@media only screen and (min-width: 800px)': {
@@ -23,6 +24,7 @@ export const styles = createUseStyles({
 			justifyContent: 'flex-end',
 			width: '100%',
 			minHeight: '11vh',
+			background: 'rgba(0, 0, 0, 0.5)',
 		},
 	},
 	timeControl: {
@@ -61,6 +63,8 @@ export const styles = createUseStyles({
 			top: '50%',
 			transform: 'translateY(-50%)',
 			paddingTop: 5,
+			color: '#fff',
+			letterSpacing: 2,
 
 			'& h2': { fontSize: '1.2rem', paddingBottom: '0.4rem' },
 			'& h3': { fontSize: '0.7rem' },
@@ -73,19 +77,16 @@ export const styles = createUseStyles({
 		fontSize: '0.65rem',
 		letterSpacing: 1,
 		padding: [['1rem', 0]],
+		color: '#fff',
 
 		'& p': {
-			'&:nth-child(2)': { textAlign: 'right' },
-
-			'@media only screen and (min-width: 1024px)': {
-				'&:nth-child(2)': { color: 'gray' },
-			},
+			'&:nth-child(2)': { opacity: 0.86, textAlign: 'right' },
 		},
 		'@media only screen and (min-width: 1024px)': {
 			position: 'relative',
 			bottom: -3,
 			justifyContent: 'space-between',
-			width: 75,
+			width: 90,
 			marginLeft: 'auto',
 		},
 	},
@@ -94,7 +95,7 @@ export const styles = createUseStyles({
 		top: 0,
 		background: 'lightblue',
 		width: '90%',
-		height: '0.2rem',
+		height: '0.3rem',
 		overflow: 'hidden',
 
 		'@media only screen and (min-width: 1024px)': { width: '100%' },
@@ -105,7 +106,8 @@ export const styles = createUseStyles({
 		left: 0,
 		width: '100%',
 		height: '100%',
-		background: 'rgb(204,204,204)',
+		background: '#00A4D8',
+		border: '1px solid #fff',
 		transform: 'translateX(0%)',
 		pointerEvents: 'none',
 	},
@@ -120,7 +122,7 @@ export const styles = createUseStyles({
 			position: 'absolute',
 			top: '50%',
 			transform: 'translateY(-50%)',
-			width: '20%',
+			width: '14%',
 			padding: [['0.7rem']],
 		},
 	},
@@ -129,13 +131,13 @@ export const styles = createUseStyles({
 		height: '38px !important',
 		padding: '0.55rem',
 		borderRadius: '50%',
-		border: [[1, 'solid', '#000']],
+		border: [[2, 'solid', '#fff']],
 	},
 	skip: {
 		width: '20px !important',
 		height: '20px !important',
 	},
-	icon: { cursor: 'pointer' },
+	icon: { cursor: 'pointer !important', color: '#fff' },
 	'input[type="range"]': {
 		'&:focus': { outline: 'none' },
 	},

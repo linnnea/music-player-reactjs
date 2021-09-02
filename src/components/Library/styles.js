@@ -7,23 +7,65 @@ export const styles = createUseStyles({
 		left: 0,
 		width: '100%',
 		height: '100%',
-		background: '#fff',
-		boxShadow: [[2, 2, 50, 'rgba(204, 204, 204)']],
+		background: '#292929',
+		color: '#fff',
 		overflow: 'scroll',
 		transition: 'all 0.5s ease',
-		'@media only screen and (min-width: 768px)': { width: '20rem' },
-		'& h2': {
-			display: 'flex',
-			flexDirection: 'column',
-			justifyContent: 'center',
-			padding: [[0, '1rem']],
-			minHeight: '10vh',
-			fontSize: '0.9rem',
-			borderBottom: [[1, 'solid', '#000']],
-		},
+		padding: [[0, '5%']],
 	},
 	'*': {
 		scrollbarWidth: 'thin',
 		scrollbarColor: 'rgba(155,155,155, 0.5) transparent',
+	},
+	album: {
+		display: 'flex',
+		justifyContent: 'center',
+		margin: [['5em', 'auto', '2em', 'auto']],
+		'@media only screen and (min-width: 800px)': {
+			flex: 1,
+			margin: '2em auto !important',
+		},
+	},
+	albumCover: {
+		maxWidth: '100%',
+		height: '34vh',
+		borderRadius: '2em',
+	},
+	albumInfo: {
+		display: 'flex',
+		flexDirection: 'column',
+		padding: [[0, '5%']],
+		margin: 'auto',
+		maxWidth: '23em',
+
+		'& *': { paddingBottom: '0.5rem' },
+		'& h2': { fontSize: '3rem' },
+		'& h5': { fontWeight: 'lighter', textTransform: 'uppercase' },
+		'& :nth-child(3)': {
+			borderBottom: '1px solid #fff',
+			paddingBottom: '1.7rem',
+		},
+	},
+	librarySongs: {
+		margin: [[30, 'auto', 0, 'auto']],
+
+		'& *': { padding: [[1, 6]] },
+	},
+	sections: {
+		'@media only screen and (min-width: 800px)': {
+			display: 'flex',
+			position: 'relative',
+			top: '50%',
+			left: '50%',
+			transform: 'translate(-50%,-50%)',
+			maxWidth: '45em',
+		},
+	},
+	songsContainer: {
+		'@media only screen and (min-width: 800px)': {
+			flex: 1,
+			margin: [['2em', 'auto']],
+			width: 300,
+		},
 	},
 });

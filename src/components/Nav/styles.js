@@ -6,11 +6,11 @@ export const styles = createUseStyles({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		minHeight: '10vh',
-		borderBottom: [[1, 'solid', '#000']],
-		'& *': { margin: [[0, '5%']] },
-		'& h1': {
-			fontSize: '1rem',
-			whiteSpace: 'nowrap',
+		'& *': { margin: [[0, '5%']], fontFamily: 'Monument Regular' },
+		'& img': {
+			position: 'relative',
+			width: 85,
+			zIndex: 11,
 		},
 		'& button': {
 			textTransform: 'uppercase',
@@ -18,8 +18,8 @@ export const styles = createUseStyles({
 			background: '#000',
 			border: 'none',
 			color: '#fff',
-			padding: [[2, 4, 0, 4]],
-			fontSize: '1rem',
+			padding: [[3, 4, 0, 4]],
+			fontSize: '1.3rem',
 			transition: 'all 0.3s ease',
 			zIndex: 10,
 			width: 'auto',

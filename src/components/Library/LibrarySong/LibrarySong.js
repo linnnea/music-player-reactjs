@@ -1,13 +1,14 @@
 import { styles } from './styles';
+import EqualizerIcon from '@material-ui/icons/Equalizer';
 
 const LibrarySong = ({
 	song,
 	songs,
 	setCurrentSong,
-	id,
 	currentSong,
 	setSongs,
 	customStyles,
+	isPlaying,
 }) => {
 	const classes = styles(customStyles);
 
@@ -30,15 +31,18 @@ const LibrarySong = ({
 			className={classes.librarySong}
 			style={
 				song.id === currentSong.id
-					? { backgroundColor: '#000', color: '#fff' }
+					? { backgroundColor: '#fff', color: '#000', borderRadius: '0.5em' }
 					: { backgroundColor: '' }
 			}
 		>
-			<img src={song.cover} alt={song.name} />
 			<div className={classes.songDescription}>
+				<h3>{song.number}</h3>
 				<h3>{song.name}</h3>
-				<h4>{song.artist}</h4>
+				{/* <h4>{song.artist}</h4> */}
 			</div>
+			{isPlaying && song.id === currentSong.id && (
+				<EqualizerIcon className={classes.playStatus} />
+			)}
 		</div>
 	);
 };

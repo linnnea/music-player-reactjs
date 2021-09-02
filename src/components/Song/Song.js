@@ -1,10 +1,12 @@
 import { styles } from './styles';
+import FlyingHead from '../FlyingHead/FlyingHead';
 
-const Song = ({ currentSong }) => {
+const Song = ({ currentSong, isPlaying }) => {
 	const classes = styles();
 	return (
 		<div className={classes.songContainer}>
-			<img src={currentSong.cover} alt={currentSong.name} />
+			{/* <img src={coverImg} alt={currentSong.name} /> */}
+			<FlyingHead currentSong={currentSong} isPlaying={isPlaying} />
 			<div className={classes.songInfo}>
 				<h2>{currentSong.name}</h2>
 				<h3>{currentSong.artist}</h3>

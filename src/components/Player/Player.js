@@ -68,7 +68,6 @@ const Player = ({
 		);
 	};
 
-	// Styles
 	const trackAnim = {
 		transform: `translateX(${songInfo.animationPercentage}%)`,
 	};
@@ -78,17 +77,12 @@ const Player = ({
 			className={classes.player}
 			style={
 				libraryStatus
-					? { paddingLeft: '30%', width: '70%', transition: 'all 0.3s ease' }
-					: { paddingLeft: '0%', width: '100%', transition: 'all 0.3s ease' }
+					? { marginLeft: '20%', width: '80%', transition: 'all 0.3s ease' }
+					: { marginLeft: '0%', width: '100%', transition: 'all 0.3s ease' }
 			}
 		>
 			<div className={classes.timeControl}>
-				<div
-					className={classes.track}
-					style={{
-						background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
-					}}
-				>
+				<div className={classes.track} style={{ background: '#fff' }}>
 					<input
 						onChange={dragHandler}
 						type="range"

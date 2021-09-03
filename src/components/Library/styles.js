@@ -1,21 +1,25 @@
 import { createUseStyles } from 'react-jss';
+import bgImg from '../../assets/images/bg.jpeg';
 
 export const styles = createUseStyles({
+	'*': {
+		scrollbarWidth: 'thin',
+		scrollbarColor: 'rgba(155,155,155, 0.5) transparent',
+	},
 	library: {
 		position: 'fixed',
 		top: 0,
 		left: 0,
 		width: '100%',
 		height: '100%',
-		background: '#292929',
+		backgroundColor: 'rgba(0, 0, 0, 0.85)',
+		backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${bgImg})`,
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
 		color: '#fff',
 		overflow: 'scroll',
 		transition: 'all 0.5s ease',
 		padding: [[0, '5%']],
-	},
-	'*': {
-		scrollbarWidth: 'thin',
-		scrollbarColor: 'rgba(155,155,155, 0.5) transparent',
 	},
 	album: {
 		display: 'flex',
@@ -37,7 +41,6 @@ export const styles = createUseStyles({
 		padding: [[0, '5%']],
 		margin: 'auto',
 		maxWidth: '23em',
-
 		'& *': { paddingBottom: '0.5rem' },
 		'& h2': { fontSize: '3rem' },
 		'& h5': { fontWeight: 'lighter', textTransform: 'uppercase' },
@@ -48,7 +51,6 @@ export const styles = createUseStyles({
 	},
 	librarySongs: {
 		margin: [[30, 'auto', 0, 'auto']],
-
 		'& *': { padding: [[1, 6]] },
 	},
 	sections: {

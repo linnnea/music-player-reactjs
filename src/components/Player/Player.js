@@ -73,14 +73,7 @@ const Player = ({
 	};
 
 	return (
-		<div
-			className={classes.player}
-			style={
-				libraryStatus
-					? { marginLeft: '20%', width: '80%', transition: 'all 0.3s ease' }
-					: { marginLeft: '0%', width: '100%', transition: 'all 0.3s ease' }
-			}
-		>
+		<div className={classes.player}>
 			<div className={classes.timeControl}>
 				<div className={classes.track} style={{ background: '#fff' }}>
 					<input

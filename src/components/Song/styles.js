@@ -6,16 +6,10 @@ export const styles = createUseStyles({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		minHeight: '60vh',
-		'@media only screen and (min-height: 700px)': {
-			minHeight: '74vh',
-		},
-		'@media only screen and (min-height: 800px)': {
-			minHeight: '75vh',
-		},
 		width: '90%',
 		textTransform: 'capitalize',
 		margin: [[20, 'auto', 0, 'auto']],
-
+		'@media only screen and (min-height: 700px)': { minHeight: '74vh' },
 		'@media only screen and (min-height: 650px)': {
 			margin: [[30, 'auto', 0, 'auto']],
 		},
@@ -28,6 +22,9 @@ export const styles = createUseStyles({
 			'@media only screen and (max-height: 600px)': {
 				fontSize: '2rem',
 				padding: 0,
+			},
+			'@media only screen and (min-height: 800px)': {
+				padding: [[0, 0, '0.7rem', 0]],
 			},
 		},
 		'& h3': {
@@ -44,7 +41,6 @@ export const styles = createUseStyles({
 		flexDirection: 'column',
 		color: '#fff',
 		marginTop: '3rem',
-
 		'@media only screen and (min-width: 800px)': { width: '70%' },
 		'@media only screen and (min-width: 1024px)': { display: 'none' },
 	},

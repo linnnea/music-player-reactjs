@@ -10,7 +10,7 @@ export const styles = createUseStyles({
 		'@media only screen and (max-height: 799px)': { height: 220 },
 		'@media only screen and (min-height: 800px)': { height: 250 },
 		'@media only screen and (min-height: 800px) and (min-width: 768px)': {
-			height: 'auto',
+			height: 400,
 		},
 	},
 	'@keyframes swing': {

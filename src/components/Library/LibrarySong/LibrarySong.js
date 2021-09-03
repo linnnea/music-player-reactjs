@@ -1,5 +1,5 @@
 import { styles } from './styles';
-import EqualizerIcon from '@material-ui/icons/Equalizer';
+import Equalizer from '../../Equalizer/Equalizer';
 
 const LibrarySong = ({
 	song,
@@ -40,9 +40,7 @@ const LibrarySong = ({
 				<h3>{song.name}</h3>
 				{/* <h4>{song.artist}</h4> */}
 			</div>
-			{isPlaying && song.id === currentSong.id && (
-				<EqualizerIcon className={classes.playStatus} />
-			)}
+			{isPlaying && song.id === currentSong.id && <Equalizer />}
 		</div>
 	);
 };

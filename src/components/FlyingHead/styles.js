@@ -8,9 +8,12 @@ export const styles = createUseStyles({
 		maxWidth: '100%',
 		animation: `$swing calc(60 / 10 * 2s) ease-in-out infinite`,
 		'@media only screen and (max-height: 799px)': { height: 220 },
-		'@media only screen and (min-height: 800px)': { height: 250 },
-		'@media only screen and (min-height: 800px) and (min-width: 768px)': {
-			height: 400,
+		'@media only screen and (min-height: 812px)': { height: 400 },
+		'@media only screen and (min-height: 764px) and (min-width: 900px)': {
+			height: 350,
+		},
+		'@media only screen and (min-height: 900px) and (min-width: 900px)': {
+			height: 450,
 		},
 	},
 	'@keyframes swing': {

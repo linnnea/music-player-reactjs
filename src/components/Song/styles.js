@@ -18,7 +18,9 @@ export const styles = createUseStyles({
 		},
 		'& h2': {
 			fontSize: '3rem',
-			padding: [['2rem', 0, '0.7rem', 0]],
+			'@media only screen and (max-height: 900px)': {
+				padding: [['2rem', 0, '0.7rem', 0]],
+			},
 			'@media only screen and (max-height: 600px)': {
 				fontSize: '2rem',
 				padding: 0,

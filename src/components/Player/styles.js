@@ -13,12 +13,7 @@ export const styles = createUseStyles({
 		minHeight: '20vh',
 		transition: 'all 0.3s ease',
 		fontFamily: 'Monument Regular',
-
 		'@media only screen and (min-height: 650px)': { minHeight: 'initial' },
-		'@media only screen and (min-width: 800px)': {
-			width: '70%',
-			margin: [[0, 'auto']],
-		},
 		'@media only screen and (min-width: 1024px)': {
 			bottom: 0,
 			justifyContent: 'flex-end',
@@ -32,7 +27,6 @@ export const styles = createUseStyles({
 		flexDirection: 'column',
 		alignItems: 'center',
 		width: '90%',
-
 		'& input': {
 			width: '100%',
 			padding: [['1rem', 0]],
@@ -45,7 +39,6 @@ export const styles = createUseStyles({
 		display: 'flex',
 		justifyContent: 'space-between',
 		width: '100%',
-
 		'@media only screen and (min-width: 1024px)': {
 			position: 'absolute',
 			top: '50%',
@@ -65,7 +58,6 @@ export const styles = createUseStyles({
 			paddingTop: 5,
 			color: '#fff',
 			letterSpacing: 2,
-
 			'& h2': { fontSize: '1.2rem', paddingBottom: '0.4rem' },
 			'& h3': { fontSize: '0.7rem' },
 		},
@@ -78,10 +70,7 @@ export const styles = createUseStyles({
 		letterSpacing: 1,
 		padding: [['1rem', 0]],
 		color: '#fff',
-
-		'& p': {
-			'&:nth-child(2)': { opacity: 0.86, textAlign: 'right' },
-		},
+		'& p': { '&:nth-child(2)': { opacity: 0.86, textAlign: 'right' } },
 		'@media only screen and (min-width: 1024px)': {
 			position: 'relative',
 			bottom: -3,
@@ -97,7 +86,6 @@ export const styles = createUseStyles({
 		width: '90%',
 		height: '0.3rem',
 		overflow: 'hidden',
-
 		'@media only screen and (min-width: 1024px)': { width: '100%' },
 	},
 	animateTrack: {
@@ -117,7 +105,6 @@ export const styles = createUseStyles({
 		alignItems: 'center',
 		width: 200,
 		padding: [['1rem']],
-
 		'@media only screen and (min-width: 1024px)': {
 			position: 'absolute',
 			top: '50%',

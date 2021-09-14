@@ -13,6 +13,7 @@ export const styles = createUseStyles({
 		minHeight: '20vh',
 		transition: 'all 0.3s ease',
 		fontFamily: 'Monument Regular',
+		zIndex: 20,
 		'@media only screen and (min-height: 650px)': { minHeight: 'initial' },
 		'@media only screen and (min-width: 1024px)': {
 			bottom: 0,
